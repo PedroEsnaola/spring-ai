@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: openai-test
+  ai:
+    openai:
+      api-key: ${GROK_API_KEY}
+      base-url: https://api.groq.com/openai
+      chat:
+        options:
+          model: llama3-70b-8192
+          tool-choice: auto
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/openaitest
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org:
+      apache:
+        hc:
+          client5:
+            http: DEBUG
