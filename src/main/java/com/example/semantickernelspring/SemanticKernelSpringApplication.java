@@ -36,8 +36,8 @@ public class SemanticKernelSpringApplication {
     public UserService userService;
 
     private static final String systemMessage = """
-                Voce é um assistente virtual especialista em buscar dados de usuarios em um banco, voce sabe que o usuario pedro tem o email pedro.teste@teste
-            """;
+                You are a virtual assistant specialized in searching and dealing with user  for user data
+                """;
 
     public static void main(String[] args) {
         SpringApplication.run(SemanticKernelSpringApplication.class, args);
